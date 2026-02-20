@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Portal - Hill-Top Academy International</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+
+    <!-- Header / Navigation - Overlay Style for Portal Pages -->
+    <header class="site-header is-internal" id="mainHeader">
+      <div class="logo">
+        <!-- TODO: Add crest image when available: assets/images/crest.png or images/crest.png -->
+        <span class="logo-text">Hill-Top Academy</span>
+        <span class="logo-subtitle">International</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="admissions.html" class="nav-link">Admissions</a>
+        <a href="academics.html" class="nav-link">Academics</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="portal-parent.html" class="portal-btn nav-link"
+          >Parent Portal</a
+        >
+        <a href="portal-admin.html" class="admin-btn nav-link">Admin Portal</a>
+        <a href="login.html" class="login-btn nav-link">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+            <polyline points="10 17 15 12 10 7" />
+            <line x1="15" y1="12" x2="3" y2="12" />
+          </svg>
+          Login
+        </a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+
+    <!-- Mobile Sidebar Toggle -->
+    <button class="mobile-sidebar-toggle">☰</button>
+
+    <!-- Portal Container -->
+    <div class="portal-container">
+      <!-- Sidebar -->
+      <aside class="portal-sidebar admin">
+        <div class="sidebar-back"><span>←</span> Back to Menu</div>
+        <div style="padding: 0 15px 20px">
+          <h3 style="color: white; margin-bottom: 8px; font-size: 1.1rem">
+            Admin Portal
+          </h3>
+          <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.85rem">
+            Welcome, Dr. Michael Chen
+          </p>
+        </div>
+
+        <ul class="sidebar-nav">
+          <li><a href="#dashboard" class="active">📊 Dashboard</a></li>
+          <li><a href="#admissions">🎓 Admissions</a></li>
+          <li><a href="#students">👥 Students</a></li>
+          <li><a href="#staff">👨‍🏫 Staff</a></li>
+          <li><a href="#attendance">📅 Attendance</a></li>
+          <li><a href="#communications">📢 Broadcast</a></li>
+          <li><a href="#fees">💳 Fee Reminders</a></li>
+          <li><a href="#events">📅 Events</a></li>
+          <li><a href="#records">📚 Academic Records</a></li>
+          <li><a href="#settings">⚙️ Settings</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="portal-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Administrative Dashboard</h1>
+            <p class="portal-subtitle">
+              Manage school operations and monitor key metrics
+            </p>
+          </div>
+
+          <!-- Dashboard Grid -->
+          <div class="dashboard-grid">
+            <!-- School Overview Stats -->
+            <div
+              class="dashboard-card admin-overview gsap-fade-up-delay"
+              data-delay="0"
+            >
+              <div class="card-header">
+                <h3 class="card-title">School Overview</h3>
+                <div class="card-icon-small admin"></div>
+              </div>
+              <div class="overview-stats">
+                <div class="stat-item">
+                  <div class="stat-number" data-count="487">487</div>
+                  <div class="stat-label">Total Students</div>
+                  <div class="stat-change positive">+12 this month</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number" data-count="42">42</div>
+                  <div class="stat-label">Faculty Members</div>
+                  <div class="stat-change neutral">No change</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number" data-count="94">94%</div>
+                  <div class="stat-label">Attendance Rate</div>
+                  <div class="stat-change positive">+1.2%</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number" data-count="4">15</div>
+                  <div class="stat-label">Active Classes</div>
+                  <div class="stat-change positive">Running</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="dashboard-card gsap-fade-up-delay" data-delay="50">
+              <div class="card-header">
+                <h3 class="card-title">Quick Actions</h3>
+              </div>
+              <div class="action-tiles-grid">
+                <!-- Primary Tile: Broadcast Announcement -->
+                <a href="#communications" class="action-tile primary-tile">
+                  <div class="tile-icon">📢</div>
+                  <div class="tile-content">
+                    <h4>Broadcast Announcement</h4>
+                    <p>Send message to parents</p>
+                  </div>
+                  <div class="tile-arrow">→</div>
+                </a>
+
+                <!-- Secondary Tiles -->
+                <a href="#students" class="action-tile">
+                  <div class="tile-icon">👤</div>
+                  <div class="tile-content">
+                    <h4>Add New Student</h4>
+                    <p>Enroll a new pupil</p>
+                  </div>
+                  <div class="tile-arrow">→</div>
+                </a>
+
+                <a href="#events" class="action-tile">
+                  <div class="tile-icon">📅</div>
+                  <div class="tile-content">
+                    <h4>Schedule Event</h4>
+                    <p>Add to school calendar</p>
+                  </div>
+                  <div class="tile-arrow">→</div>
+                </a>
+
+                <a href="#reports" class="action-tile">
+                  <div class="tile-icon">📊</div>
+                  <div class="tile-content">
+                    <h4>Generate Report</h4>
+                    <p>Download summaries</p>
+                  </div>
+                  <div class="tile-arrow">→</div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Recent Admissions -->
+            <div class="dashboard-card gsap-fade-up-delay" data-delay="100">
+              <div class="card-header">
+                <h3 class="card-title">🎓 New Applications</h3>
+                <a href="#admissions" class="view-all">View All</a>
+              </div>
+              <div class="applications-list">
+                <div class="application-item">
+                  <div class="applicant-info">
+                    <h5>James Wilson</h5>
+                    <p>Grade 6 • Applied: Feb 10, 2024</p>
+                  </div>
+                  <div class="application-status pending">Pending Review</div>
+                </div>
+                <div class="application-item">
+                  <div class="applicant-info">
+                    <h5>Sofia Martinez</h5>
+                    <p>Grade 3 • Applied: Feb 8, 2024</p>
+                  </div>
+                  <div class="application-status approved">Approved</div>
+                </div>
+                <div class="application-item">
+                  <div class="applicant-info">
+                    <h5>David Kim</h5>
+                    <p>Grade 9 • Applied: Feb 5, 2024</p>
+                  </div>
+                  <div class="application-status interview">
+                    Interview Scheduled
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pending Approvals -->
+            <div class="dashboard-card gsap-fade-up-delay" data-delay="120">
+              <div class="card-header">
+                <h3 class="card-title">📋 Pending Approvals</h3>
+                <span class="badge-count">5</span>
+              </div>
+              <div class="pending-list">
+                <div class="pending-item">
+                  <span class="pending-icon">📝</span>
+                  <div class="pending-info">
+                    <h5>Fee Adjustment Request</h5>
+                    <p>3 pending requests</p>
+                  </div>
+                </div>
+                <div class="pending-item">
+                  <span class="pending-icon">🏫</span>
+                  <div class="pending-info">
+                    <h5>Field Trip Approval</h5>
+                    <p>Grade 8 • Science Centre Visit</p>
+                  </div>
+                </div>
+                <div class="pending-item">
+                  <span class="pending-icon">📚</span>
+                  <div class="pending-info">
+                    <h5>Textbook Requisition</h5>
+                    <p>2 departments pending</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Upcoming Events -->
+            <div class="dashboard-card gsap-fade-up-delay" data-delay="140">
+              <div class="card-header">
+                <h3 class="card-title">📅 Upcoming Events</h3>
+                <a href="#events" class="view-all">View Calendar</a>
+              </div>
+              <div class="events-mini-list">
+                <div class="event-mini">
+                  <div class="event-date-mini">15 Feb</div>
+                  <div class="event-details-mini">
+                    <h5>Parent-Teacher Conference</h5>
+                    <p>All Grades • 8:00 AM</p>
+                  </div>
+                </div>
+                <div class="event-mini">
+                  <div class="event-date-mini">22 Feb</div>
+                  <div class="event-details-mini">
+                    <h5>Science Fair</h5>
+                    <p>Assembly Hall • 10:00 AM</p>
+                  </div>
+                </div>
+                <div class="event-mini">
+                  <div class="event-date-mini">28 Feb</div>
+                  <div class="event-details-mini">
+                    <h5>Inter-House Sports</h5>
+                    <p>School Field • 2:00 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fee Reminders -->
+            <div class="dashboard-card gsap-fade-up-delay" data-delay="160">
+              <div class="card-header">
+                <h3 class="card-title">💳 Fee Reminder System</h3>
+                <span class="badge-count warning">3</span>
+              </div>
+              <div class="fee-reminder-list">
+                <div class="fee-reminder-item">
+                  <div class="fee-info">
+                    <h5>Term 2 Fees Due</h5>
+                    <p>42 students pending</p>
+                  </div>
+                  <button class="btn-send-reminder">Send Reminder</button>
+                </div>
+                <div class="fee-reminder-item">
+                  <div class="fee-info">
+                    <h5>Outstanding Balances</h5>
+                    <p>15 accounts overdue</p>
+                  </div>
+                  <button class="btn-view-details">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Students Section -->
+        <section id="students">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Student Management</h1>
+            <p class="portal-subtitle">Manage all enrolled students</p>
+          </div>
+
+          <div class="dashboard-card gsap-fade-up-delay">
+            <h3 class="card-title" style="margin-bottom: 20px">
+              Student Directory
+            </h3>
+            <div style="display: grid; gap: 15px">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 15px;
+                  background: var(--bg-light);
+                  border-radius: 10px;
+                "
+              >
+                <div><strong>Emma Johnson</strong> • Grade 7B</div>
+                <span class="stat-badge excellent">Active</span>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 15px;
+                  background: var(--bg-light);
+                  border-radius: 10px;
+                "
+              >
+                <div><strong>Michael Brown</strong> • Grade 8A</div>
+                <span class="stat-badge excellent">Active</span>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 15px;
+                  background: var(--bg-light);
+                  border-radius: 10px;
+                "
+              >
+                <div><strong>Sarah Davis</strong> • Grade 6C</div>
+                <span class="stat-badge excellent">Active</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Staff Section -->
+        <section id="staff">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Staff Management</h1>
+            <p class="portal-subtitle">Faculty and administrative staff</p>
+          </div>
+
+          <div class="dashboard-card gsap-fade-up-delay">
+            <h3 class="card-title" style="margin-bottom: 20px">
+              Staff Directory
+            </h3>
+            <div style="display: grid; gap: 15px">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 15px;
+                  background: var(--bg-light);
+                  border-radius: 10px;
+                "
+              >
+                <div><strong>Dr. Michael Chen</strong> • Principal</div>
+                <span class="stat-badge excellent">Active</span>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 15px;
+                  background: var(--bg-light);
+                  border-radius: 10px;
+                "
+              >
+                <div>
+                  <strong>Ms. Patricia Williams</strong> • Grade 7B Teacher
+                </div>
+                <span class="stat-badge excellent">Active</span>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 15px;
+                  background: var(--bg-light);
+                  border-radius: 10px;
+                "
+              >
+                <div><strong>Mr. Kofi Mensah</strong> • Mathematics Head</div>
+                <span class="stat-badge excellent">Active</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Records Section -->
+        <section id="records">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Academic Records</h1>
+            <p class="portal-subtitle">Student grades and transcripts</p>
+          </div>
+
+          <div class="dashboard-card gsap-fade-up-delay">
+            <h3 class="card-title" style="margin-bottom: 20px">
+              Grade Analytics
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 15px;
+              "
+            >
+              <div
+                style="
+                  text-align: center;
+                  padding: 20px;
+                  background: rgba(76, 175, 80, 0.1);
+                  border-radius: 10px;
+                "
+              >
+                <div style="font-size: 2rem; font-weight: 700; color: #4caf50">
+                  35%
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-medium)">
+                  Grade A
+                </div>
+              </div>
+              <div
+                style="
+                  text-align: center;
+                  padding: 20px;
+                  background: rgba(33, 150, 243, 0.1);
+                  border-radius: 10px;
+                "
+              >
+                <div style="font-size: 2rem; font-weight: 700; color: #2196f3">
+                  30%
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-medium)">
+                  Grade B
+                </div>
+              </div>
+              <div
+                style="
+                  text-align: center;
+                  padding: 20px;
+                  background: rgba(255, 152, 0, 0.1);
+                  border-radius: 10px;
+                "
+              >
+                <div style="font-size: 2rem; font-weight: 700; color: #ff9800">
+                  20%
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-medium)">
+                  Grade C
+                </div>
+              </div>
+              <div
+                style="
+                  text-align: center;
+                  padding: 20px;
+                  background: rgba(244, 67, 54, 0.1);
+                  border-radius: 10px;
+                "
+              >
+                <div style="font-size: 2rem; font-weight: 700; color: #f44336">
+                  15%
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-medium)">
+                  Other
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Admissions Section -->
+        <section id="admissions">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Admissions Management</h1>
+            <p class="portal-subtitle">Process and track applications</p>
+          </div>
+
+          <div class="dashboard-grid">
+            <div class="dashboard-card gsap-fade-up-delay">
+              <h3 class="card-title" style="margin-bottom: 20px">
+                Application Statistics
+              </h3>
+              <div style="display: grid; gap: 15px">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 12px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                  "
+                >
+                  <span>Total Applications</span>
+                  <strong>156</strong>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 12px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                  "
+                >
+                  <span>Pending Review</span>
+                  <strong style="color: #ff9800">45</strong>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 12px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                  "
+                >
+                  <span>Approved</span>
+                  <strong style="color: #4caf50">89</strong>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 12px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                  "
+                >
+                  <span>Rejected</span>
+                  <strong style="color: #f44336">22</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-card gsap-fade-up-delay" data-delay="50">
+              <h3 class="card-title" style="margin-bottom: 20px">
+                Recent Applications
+              </h3>
+              <div style="display: grid; gap: 12px">
+                <div
+                  style="
+                    padding: 15px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                    border-left: 4px solid #ff9800;
+                  "
+                >
+                  <strong>James Wilson</strong> • Grade 6<br />
+                  <span style="font-size: 0.85rem; color: var(--text-medium)"
+                    >Applied: Feb 10, 2024</span
+                  >
+                </div>
+                <div
+                  style="
+                    padding: 15px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                    border-left: 4px solid #4caf50;
+                  "
+                >
+                  <strong>Sofia Martinez</strong> • Grade 3<br />
+                  <span style="font-size: 0.85rem; color: var(--text-medium)"
+                    >Applied: Feb 8, 2024</span
+                  >
+                </div>
+                <div
+                  style="
+                    padding: 15px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                    border-left: 4px solid #2196f3;
+                  "
+                >
+                  <strong>David Kim</strong> • Grade 9<br />
+                  <span style="font-size: 0.85rem; color: var(--text-medium)"
+                    >Applied: Feb 5, 2024</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Finance Section -->
+        <section id="finance">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Financial Management</h1>
+            <p class="portal-subtitle">Revenue and expense tracking</p>
+          </div>
+
+          <div class="dashboard-grid">
+            <div class="dashboard-card gsap-fade-up-delay">
+              <h3 class="card-title" style="margin-bottom: 20px">
+                Revenue Overview
+              </h3>
+              <div style="display: grid; gap: 15px">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 15px;
+                    background: rgba(76, 175, 80, 0.1);
+                    border-radius: 10px;
+                  "
+                >
+                  <span>Monthly Revenue</span>
+                  <strong style="color: #4caf50; font-size: 1.2rem"
+                    >₵1.45M</strong
+                  >
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 15px;
+                    background: var(--bg-light);
+                    border-radius: 10px;
+                  "
+                >
+                  <span>Outstanding Fees</span>
+                  <strong style="color: #ff9800">₵197,250</strong>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 15px;
+                    background: var(--bg-light);
+                    border-radius: 10px;
+                  "
+                >
+                  <span>Collection Rate</span>
+                  <strong>88%</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-card gsap-fade-up-delay" data-delay="50">
+              <h3 class="card-title" style="margin-bottom: 20px">
+                Fee Structure
+              </h3>
+              <div style="display: grid; gap: 12px">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                  "
+                >
+                  <span>Early Years Tuition</span>
+                  <strong>₵25,500/yr</strong>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                  "
+                >
+                  <span>Primary Tuition</span>
+                  <strong>₵36,000/yr</strong>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                  "
+                >
+                  <span>Junior High Tuition</span>
+                  <strong>₵46,500/yr</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Communications Section -->
+        <section id="communications">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Communications</h1>
+            <p class="portal-subtitle">Send announcements and messages</p>
+          </div>
+
+          <div class="dashboard-card gsap-fade-up-delay">
+            <h3 class="card-title" style="margin-bottom: 20px">
+              Create Announcement
+            </h3>
+            <div class="announcement-form">
+              <input
+                type="text"
+                placeholder="Announcement title..."
+                class="form-input"
+              />
+              <textarea
+                placeholder="Write your announcement here..."
+                class="form-textarea"
+              ></textarea>
+              <div class="form-actions">
+                <select class="form-select">
+                  <option>All Users</option>
+                  <option>Parents Only</option>
+                  <option>Staff Only</option>
+                  <option>Students Only</option>
+                </select>
+                <button class="btn btn-primary">Publish Announcement</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Events & Calendar</h1>
+            <p class="portal-subtitle">Manage school events</p>
+          </div>
+
+          <div class="dashboard-card gsap-fade-up-delay">
+            <h3 class="card-title" style="margin-bottom: 20px">
+              Upcoming Events
+            </h3>
+            <div class="events-list">
+              <div class="event-item-small">
+                <div class="event-date-small">
+                  <span class="date">15</span>
+                  <span class="month">FEB</span>
+                </div>
+                <div class="event-info-small">
+                  <h5>Parent-Teacher Conferences</h5>
+                  <p>120 appointments scheduled</p>
+                </div>
+              </div>
+              <div class="event-item-small">
+                <div class="event-date-small">
+                  <span class="date">22</span>
+                  <span class="month">FEB</span>
+                </div>
+                <div class="event-info-small">
+                  <h5>Science Fair Exhibition</h5>
+                  <p>45 projects registered</p>
+                </div>
+              </div>
+              <div class="event-item-small">
+                <div class="event-date-small">
+                  <span class="date">01</span>
+                  <span class="month">MAR</span>
+                </div>
+                <div class="event-info-small">
+                  <h5>International Women's Day</h5>
+                  <p>Special assembly planned</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Reports Section -->
+        <section id="reports">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Reports & Analytics</h1>
+            <p class="portal-subtitle">School performance insights</p>
+          </div>
+
+          <div class="dashboard-grid">
+            <div class="dashboard-card gsap-fade-up-delay">
+              <h3 class="card-title" style="margin-bottom: 20px">
+                Quick Reports
+              </h3>
+              <div style="display: grid; gap: 12px">
+                <button class="btn btn-outline" style="text-align: left">
+                  📊 Attendance Report
+                </button>
+                <button class="btn btn-outline" style="text-align: left">
+                  📈 Academic Performance
+                </button>
+                <button class="btn btn-outline" style="text-align: left">
+                  💰 Financial Summary
+                </button>
+                <button class="btn btn-outline" style="text-align: left">
+                  🎓 Enrollment Statistics
+                </button>
+              </div>
+            </div>
+
+            <div class="dashboard-card gsap-fade-up-delay" data-delay="50">
+              <h3 class="card-title" style="margin-bottom: 20px">
+                Key Metrics
+              </h3>
+              <div style="display: grid; gap: 15px">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 12px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                  "
+                >
+                  <span>Student Retention</span>
+                  <strong>92%</strong>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 12px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                  "
+                >
+                  <span>Parent Satisfaction</span>
+                  <strong>4.5/5</strong>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 12px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                  "
+                >
+                  <span>Teacher Turnover</span>
+                  <strong>8%</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">System Settings</h1>
+            <p class="portal-subtitle">Configure portal preferences</p>
+          </div>
+
+          <div class="dashboard-card gsap-fade-up-delay">
+            <h3 class="card-title" style="margin-bottom: 20px">
+              General Settings
+            </h3>
+            <div style="display: grid; gap: 15px">
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  cursor: pointer;
+                "
+              >
+                <input type="checkbox" checked /> Enable email notifications
+              </label>
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  cursor: pointer;
+                "
+              >
+                <input type="checkbox" checked /> Allow parent self-registration
+              </label>
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  cursor: pointer;
+                "
+              >
+                <input type="checkbox" /> Maintenance mode
+              </label>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Campaign Modal -->
+    <div class="modal-overlay" id="campaignModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="modal-close">&times;</button>
+          <h2>📢 Campaign Preview</h2>
+          <p>Announcement preview for parents & students</p>
+        </div>
+        <div class="modal-body">
+          <h3>Spring Semester Activities & Updates</h3>
+          <p>This is how your announcement will appear to recipients.</p>
+
+          <div
+            style="
+              background: var(--bg-light);
+              padding: 20px;
+              border-radius: 12px;
+              margin: 20px 0;
+            "
+          >
+            <h4 style="color: var(--primary-blue); margin-bottom: 15px">
+              Key Messages:
+            </h4>
+            <ul style="padding-left: 20px; color: var(--text-medium)">
+              <li style="margin-bottom: 8px">
+                Parent-Conference reminder and sign-up links
+              </li>
+              <li style="margin-bottom: 8px">
+                Spring sports registration deadlines
+              </li>
+              <li>Science Fair participation details</li>
+            </ul>
+          </div>
+
+          <p style="color: var(--text-light); font-size: 0.85rem">
+            Target: All Parents & Students<br />
+            Scheduled: February 12, 2024 at 9:00 AM
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline modal-dismiss">Cancel</button>
+          <button class="btn btn-primary">Send Campaign</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/gsap.min.js"></script>
+    <script src="../js/ScrollTrigger.min.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

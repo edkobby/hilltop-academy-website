@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Parent Portal - Hill-Top Academy International</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+
+    <!-- Header / Navigation - Overlay Style for Portal Pages -->
+    <header class="site-header is-internal" id="mainHeader">
+      <div class="logo">
+        <!-- TODO: Add crest image when available: assets/images/crest.png or images/crest.png -->
+        <span class="logo-text">Hill-Top Academy</span>
+        <span class="logo-subtitle">International</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="admissions.html" class="nav-link">Admissions</a>
+        <a href="academics.html" class="nav-link">Academics</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="portal-parent.html" class="portal-btn nav-link"
+          >Parent Portal</a
+        >
+        <a href="portal-admin.html" class="admin-btn nav-link">Admin Portal</a>
+        <a href="login.html" class="login-btn nav-link">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+            <polyline points="10 17 15 12 10 7" />
+            <line x1="15" y1="12" x2="3" y2="12" />
+          </svg>
+          Login
+        </a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+
+    <!-- Mobile Sidebar Toggle -->
+    <button class="mobile-sidebar-toggle">☰</button>
+
+    <!-- Portal Container -->
+    <div class="portal-container">
+      <!-- Sidebar -->
+      <aside class="portal-sidebar">
+        <div class="sidebar-back"><span>←</span> Back to Menu</div>
+        <div style="padding: 0 15px 20px">
+          <h3 style="color: white; margin-bottom: 8px; font-size: 1.1rem">
+            Parent Portal
+          </h3>
+          <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.85rem">
+            Welcome, Sarah Johnson
+          </p>
+        </div>
+
+        <ul class="sidebar-nav">
+          <li><a href="#dashboard" class="active">📊 Dashboard</a></li>
+          <li><a href="#fees">💳 Fees & Payments</a></li>
+          <li><a href="#report-card">📄 Report Card</a></li>
+          <li><a href="#messages">💬 Message Teacher</a></li>
+          <li><a href="#announcements">📢 Announcements</a></li>
+          <li><a href="#attendance">📅 Attendance</a></li>
+          <li><a href="#student-profile">👤 Student Profile</a></li>
+          <li><a href="#events">🎉 School Calendar</a></li>
+          <li><a href="#grades">📈 Grades</a></li>
+          <li><a href="#settings">⚙️ Settings</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="portal-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard">
+          <!-- Portal Header -->
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Parent Dashboard</h1>
+            <p class="portal-subtitle">
+              Stay connected with Emma's academic journey
+            </p>
+          </div>
+
+          <!-- Dashboard Grid -->
+          <div class="dashboard-grid">
+            <!-- Student Overview -->
+            <div class="dashboard-card gsap-fade-up-delay" data-delay="0">
+              <div class="card-header">
+                <h3 class="card-title">Student Profile</h3>
+                <div class="card-icon-small"></div>
+              </div>
+              <div class="student-info">
+                <div class="student-avatar">
+                  <div class="avatar-circle">EJ</div>
+                </div>
+                <div class="student-details">
+                  <h4>Emma Johnson</h4>
+                  <p>Grade 7B • Student ID: HTA2024-0156</p>
+                  <p>Homeroom Teacher: Ms. Patricia Williams</p>
+                  <div class="quick-stats">
+                    <span class="stat-badge excellent">Attendance: 96%</span>
+                    <span class="stat-badge good">GPA: 3.8</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Grades -->
+            <div class="dashboard-card gsap-fade-up-delay" data-delay="50">
+              <div class="card-header">
+                <h3 class="card-title">Recent Grades</h3>
+                <a href="#grades" class="view-all">View All</a>
+              </div>
+              <div class="grades-list">
+                <div class="grade-item">
+                  <div class="subject">Mathematics</div>
+                  <div class="assignment">Chapter 5 Test</div>
+                  <div class="grade excellent">A-</div>
+                </div>
+                <div class="grade-item">
+                  <div class="subject">English</div>
+                  <div class="assignment">Essay: My Hero</div>
+                  <div class="grade good">B+</div>
+                </div>
+                <div class="grade-item">
+                  <div class="subject">Science</div>
+                  <div class="assignment">Lab Report</div>
+                  <div class="grade excellent">A</div>
+                </div>
+                <div class="grade-item">
+                  <div class="subject">History</div>
+                  <div class="assignment">Project: Ancient Egypt</div>
+                  <div class="grade excellent">A+</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Upcoming Assignments -->
+            <div class="dashboard-card gsap-fade-up-delay" data-delay="100">
+              <div class="card-header">
+                <h3 class="card-title">Upcoming Assignments</h3>
+                <a href="#assignments" class="view-all">View All</a>
+              </div>
+              <div class="assignments-list">
+                <div class="assignment-item">
+                  <div class="assignment-info">
+                    <h5>Science Fair Project</h5>
+                    <p>Science • Due: Feb 20, 2024</p>
+                  </div>
+                  <div class="assignment-status due-soon">Due Soon</div>
+                </div>
+                <div class="assignment-item">
+                  <div class="assignment-info">
+                    <h5>Book Report: Wonder</h5>
+                    <p>English • Due: Feb 25, 2024</p>
+                  </div>
+                  <div class="assignment-status upcoming">Upcoming</div>
+                </div>
+                <div class="assignment-item">
+                  <div class="assignment-info">
+                    <h5>Math Quiz: Fractions</h5>
+                    <p>Mathematics • Due: Feb 28, 2024</p>
+                  </div>
+                  <div class="assignment-status upcoming">Upcoming</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Announcements -->
+            <div class="dashboard-card gsap-fade-up-delay" data-delay="150">
+              <div class="card-header">
+                <h3 class="card-title">School Announcements</h3>
+                <div class="notification-badge">3</div>
+              </div>
+              <div class="announcements-list">
+                <div class="announcement-item">
+                  <div class="announcement-icon">📢</div>
+                  <div class="announcement-content">
+                    <h5>Parent-Teacher Conferences</h5>
+                    <p>Sign up for conferences scheduled for February 15th</p>
+                    <span class="announcement-date">2 days ago</span>
+                  </div>
+                </div>
+                <div class="announcement-item">
+                  <div class="announcement-icon">🎭</div>
+                  <div class="announcement-content">
+                    <h5>Spring Musical Auditions</h5>
+                    <p>Auditions for "The Lion King Jr." begin March 15th</p>
+                    <span class="announcement-date">1 week ago</span>
+                  </div>
+                </div>
+                <div class="announcement-item">
+                  <div class="announcement-icon">🏃</div>
+                  <div class="announcement-content">
+                    <h5>Spring Sports Registration</h5>
+                    <p>Registration now open for spring sports teams</p>
+                    <span class="announcement-date">1 week ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Student Profile Section -->
+        <section id="student-profile">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Student Profile</h1>
+            <p class="portal-subtitle">Emma Johnson's academic information</p>
+          </div>
+
+          <div class="dashboard-grid">
+            <div class="dashboard-card gsap-fade-up-delay">
+              <h3 class="card-title" style="margin-bottom: 20px">
+                Personal Information
+              </h3>
+              <div style="display: grid; gap: 15px">
+                <div><strong>Full Name:</strong> Emma Johnson</div>
+                <div><strong>Grade:</strong> 7B</div>
+                <div><strong>Student ID:</strong> HTA2024-0156</div>
+                <div><strong>Date of Birth:</strong> March 15, 2012</div>
+                <div><strong>Homeroom:</strong> Ms. Patricia Williams</div>
+              </div>
+            </div>
+
+            <div class="dashboard-card gsap-fade-up-delay" data-delay="50">
+              <h3 class="card-title" style="margin-bottom: 20px">
+                Academic Summary
+              </h3>
+              <div style="display: grid; gap: 15px">
+                <div><strong>Current GPA:</strong> 3.8</div>
+                <div><strong>Academic Year:</strong> 2023-2024</div>
+                <div><strong>Semester:</strong> 2</div>
+                <div><strong>Total Credits:</strong> 45</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Grades Section -->
+        <section id="grades">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Grades & Progress</h1>
+            <p class="portal-subtitle">Emma's academic performance</p>
+          </div>
+
+          <div class="dashboard-card gsap-fade-up-delay">
+            <h3 class="card-title" style="margin-bottom: 20px">Grade Report</h3>
+            <table style="width: 100%; border-collapse: collapse">
+              <thead>
+                <tr style="background: var(--bg-light)">
+                  <th
+                    style="
+                      padding: 12px;
+                      text-align: left;
+                      border-bottom: 2px solid var(--bg-off-white);
+                    "
+                  >
+                    Subject
+                  </th>
+                  <th
+                    style="
+                      padding: 12px;
+                      text-align: left;
+                      border-bottom: 2px solid var(--bg-off-white);
+                    "
+                  >
+                    Teacher
+                  </th>
+                  <th
+                    style="
+                      padding: 12px;
+                      text-align: center;
+                      border-bottom: 2px solid var(--bg-off-white);
+                    "
+                  >
+                    Grade
+                  </th>
+                  <th
+                    style="
+                      padding: 12px;
+                      text-align: center;
+                      border-bottom: 2px solid var(--bg-off-white);
+                    "
+                  >
+                    Status
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    style="
+                      padding: 12px;
+                      border-bottom: 1px solid var(--bg-off-white);
+                    "
+                  >
+                    Mathematics
+                  </td>
+                  <td>Mr. Kofi Mensah</td>
+                  <td
+                    style="
+                      text-align: center;
+                      border-bottom: 1px solid var(--bg-off-white);
+                    "
+                  >
+                    A-
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      border-bottom: 1px solid var(--bg-off-white);
+                    "
+                  >
+                    Completed
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="
+                      padding: 12px;
+                      border-bottom: 1px solid var(--bg-off-white);
+                    "
+                  >
+                    English
+                  </td>
+                  <td>Ms. Sarah Adams</td>
+                  <td
+                    style="
+                      text-align: center;
+                      border-bottom: 1px solid var(--bg-off-white);
+                    "
+                  >
+                    B+
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      border-bottom: 1px solid var(--bg-off-white);
+                    "
+                  >
+                    Completed
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="
+                      padding: 12px;
+                      border-bottom: 1px solid var(--bg-off-white);
+                    "
+                  >
+                    Science
+                  </td>
+                  <td>Dr. James Osei</td>
+                  <td
+                    style="
+                      text-align: center;
+                      border-bottom: 1px solid var(--bg-off-white);
+                    "
+                  >
+                    A
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      border-bottom: 1px solid var(--bg-off-white);
+                    "
+                  >
+                    Completed
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="
+                      padding: 12px;
+                      border-bottom: 1px solid var(--bg-off-white);
+                    "
+                  >
+                    History
+                  </td>
+                  <td>Ms. Patricia Williams</td>
+                  <td
+                    style="
+                      text-align: center;
+                      border-bottom: 1px solid var(--bg-off-white);
+                    "
+                  >
+                    A+
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      border-bottom: 1px solid var(--bg-off-white);
+                    "
+                  >
+                    Completed
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="
+                      padding: 12px;
+                      border-bottom: 1px solid var(--bg-off-white);
+                    "
+                  >
+                    French
+                  </td>
+                  <td>Mme. Anne Dupont</td>
+                  <td
+                    style="
+                      text-align: center;
+                      border-bottom: 1px solid var(--bg-off-white);
+                    "
+                  >
+                    B
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      border-bottom: 1px solid var(--bg-off-white);
+                    "
+                  >
+                    In Progress
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Attendance Section -->
+        <section id="attendance">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Attendance Records</h1>
+            <p class="portal-subtitle">Emma's attendance summary</p>
+          </div>
+
+          <div class="dashboard-grid">
+            <div class="dashboard-card gsap-fade-up-delay">
+              <div class="card-header">
+                <h3 class="card-title">Attendance Overview</h3>
+              </div>
+              <div class="attendance-overview">
+                <div class="attendance-stat">
+                  <div class="stat-number" data-count="96">96%</div>
+                  <div class="stat-label">Overall Attendance</div>
+                </div>
+                <div class="attendance-details">
+                  <div class="attendance-row">
+                    <span>Days Present</span>
+                    <span class="present">115</span>
+                  </div>
+                  <div class="attendance-row">
+                    <span>Days Absent</span>
+                    <span class="absent">5</span>
+                  </div>
+                  <div class="attendance-row">
+                    <span>Tardies</span>
+                    <span class="tardy">2</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-card gsap-fade-up-delay" data-delay="50">
+              <h3 class="card-title" style="margin-bottom: 20px">
+                Recent Absences
+              </h3>
+              <div style="display: grid; gap: 10px">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 8px 0;
+                    border-bottom: 1px solid var(--bg-off-white);
+                  "
+                >
+                  <span>Feb 5, 2024</span>
+                  <span style="color: var(--text-medium)">Sick Leave</span>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 8px 0;
+                    border-bottom: 1px solid var(--bg-off-white);
+                  "
+                >
+                  <span>Jan 22, 2024</span>
+                  <span style="color: var(--text-medium)">Personal</span>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 8px 0;
+                  "
+                >
+                  <span>Jan 8, 2024</span>
+                  <span style="color: var(--text-medium)">Sick Leave</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Assignments Section -->
+        <section id="assignments">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Assignments</h1>
+            <p class="portal-subtitle">Current and upcoming assignments</p>
+          </div>
+
+          <div class="dashboard-card gsap-fade-up-delay">
+            <h3 class="card-title" style="margin-bottom: 20px">
+              Assignment List
+            </h3>
+            <div style="display: grid; gap: 15px">
+              <div
+                style="
+                  padding: 15px;
+                  background: var(--bg-light);
+                  border-radius: 10px;
+                  border-left: 4px solid var(--primary-blue);
+                "
+              >
+                <h4 style="margin-bottom: 8px">Science Fair Project</h4>
+                <p
+                  style="
+                    font-size: 0.9rem;
+                    color: var(--text-medium);
+                    margin-bottom: 8px;
+                  "
+                >
+                  Science • Due: Feb 20, 2024
+                </p>
+                <span class="assignment-status due-soon">Due Soon</span>
+              </div>
+              <div
+                style="
+                  padding: 15px;
+                  background: var(--bg-light);
+                  border-radius: 10px;
+                  border-left: 4px solid var(--primary-light);
+                "
+              >
+                <h4 style="margin-bottom: 8px">Book Report: Wonder</h4>
+                <p
+                  style="
+                    font-size: 0.9rem;
+                    color: var(--text-medium);
+                    margin-bottom: 8px;
+                  "
+                >
+                  English • Due: Feb 25, 2024
+                </p>
+                <span class="assignment-status upcoming">Upcoming</span>
+              </div>
+              <div
+                style="
+                  padding: 15px;
+                  background: var(--bg-light);
+                  border-radius: 10px;
+                  border-left: 4px solid var(--accent-orange);
+                "
+              >
+                <h4 style="margin-bottom: 8px">Math Quiz: Fractions</h4>
+                <p
+                  style="
+                    font-size: 0.9rem;
+                    color: var(--text-medium);
+                    margin-bottom: 8px;
+                  "
+                >
+                  Mathematics • Due: Feb 28, 2024
+                </p>
+                <span class="assignment-status upcoming">Upcoming</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Fees Section -->
+        <section id="fees">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Fees & Payments</h1>
+            <p class="portal-subtitle">Manage school fees and payments</p>
+          </div>
+
+          <div class="dashboard-grid">
+            <div class="dashboard-card gsap-fade-up-delay">
+              <div class="card-header">
+                <h3 class="card-title">Recent Transactions</h3>
+              </div>
+              <div class="fees-summary">
+                <div class="fee-status">
+                  <div class="status-indicator paid">✓</div>
+                  <div class="fee-info">
+                    <h5>Semester 2 Tuition</h5>
+                    <p>Paid on January 15, 2024</p>
+                    <span class="amount">₵18,000</span>
+                  </div>
+                </div>
+                <div class="fee-status">
+                  <div class="status-indicator pending">!</div>
+                  <div class="fee-info">
+                    <h5>Activity Fee</h5>
+                    <p>Due: February 28, 2024</p>
+                    <span class="amount">₵750</span>
+                  </div>
+                </div>
+                <div class="payment-button">
+                  <button class="btn btn-primary">Make Payment</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-card gsap-fade-up-delay" data-delay="50">
+              <h3 class="card-title" style="margin-bottom: 20px">
+                Fee Structure 2024
+              </h3>
+              <div style="display: grid; gap: 12px">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                  "
+                >
+                  <span>Tuition (Annual)</span>
+                  <strong>₵36,000</strong>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                  "
+                >
+                  <span>Activity Fee</span>
+                  <strong>₵750</strong>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                  "
+                >
+                  <span>Textbooks</span>
+                  <strong>₵1,200</strong>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    background: var(--bg-light);
+                    border-radius: 8px;
+                  "
+                >
+                  <span>Uniform</span>
+                  <strong>₵800</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Messages Section -->
+        <section id="messages">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Messages</h1>
+            <p class="portal-subtitle">Communication with teachers and staff</p>
+          </div>
+
+          <div class="dashboard-card gsap-fade-up-delay">
+            <h3 class="card-title" style="margin-bottom: 20px">
+              Recent Messages
+            </h3>
+            <div style="display: grid; gap: 15px">
+              <div
+                style="
+                  padding: 15px;
+                  background: var(--bg-light);
+                  border-radius: 10px;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 8px;
+                  "
+                >
+                  <strong>Ms. Patricia Williams</strong>
+                  <span style="color: var(--text-light); font-size: 0.85rem"
+                    >Feb 8, 2024</span
+                  >
+                </div>
+                <p
+                  style="
+                    color: var(--text-medium);
+                    font-size: 0.9rem;
+                    margin-bottom: 10px;
+                  "
+                >
+                  Emma has shown excellent improvement in herHistory assignments
+                  this week...
+                </p>
+                <a
+                  href="#"
+                  style="color: var(--primary-blue); font-size: 0.85rem"
+                  >Reply →</a
+                >
+              </div>
+              <div
+                style="
+                  padding: 15px;
+                  background: var(--bg-light);
+                  border-radius: 10px;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 8px;
+                  "
+                >
+                  <strong>Mr. Kofi Mensah</strong>
+                  <span style="color: var(--text-light); font-size: 0.85rem"
+                    >Feb 5, 2024</span
+                  >
+                </div>
+                <p
+                  style="
+                    color: var(--text-medium);
+                    font-size: 0.9rem;
+                    margin-bottom: 10px;
+                  "
+                >
+                  Great work on the mathematics quiz! Emma scored 92% on her
+                  latest test...
+                </p>
+                <a
+                  href="#"
+                  style="color: var(--primary-blue); font-size: 0.85rem"
+                  >Reply →</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Upcoming Events</h1>
+            <p class="portal-subtitle">School events and activities</p>
+          </div>
+
+          <div class="dashboard-card gsap-fade-up-delay">
+            <h3 class="card-title" style="margin-bottom: 20px">Calendar</h3>
+            <div class="events-list">
+              <div class="event-item-small">
+                <div class="event-date-small">
+                  <span class="date">15</span>
+                  <span class="month">FEB</span>
+                </div>
+                <div class="event-info-small">
+                  <h5>Parent-Teacher Conferences</h5>
+                  <p>9:00 AM - 5:00 PM</p>
+                </div>
+              </div>
+              <div class="event-item-small">
+                <div class="event-date-small">
+                  <span class="date">22</span>
+                  <span class="month">FEB</span>
+                </div>
+                <div class="event-info-small">
+                  <h5>Science Fair Exhibition</h5>
+                  <p>2:00 PM - 6:00 PM</p>
+                </div>
+              </div>
+              <div class="event-item-small">
+                <div class="event-date-small">
+                  <span class="date">01</span>
+                  <span class="month">MAR</span>
+                </div>
+                <div class="event-info-small">
+                  <h5>International Women's Day</h5>
+                  <p>10:00 AM - 11:30 AM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Resources</h1>
+            <p class="portal-subtitle">Study materials and documents</p>
+          </div>
+
+          <div class="dashboard-card gsap-fade-up-delay">
+            <h3 class="card-title" style="margin-bottom: 20px">
+              Available Resources
+            </h3>
+            <div style="display: grid; gap: 12px">
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  padding: 12px;
+                  background: var(--bg-light);
+                  border-radius: 8px;
+                  text-decoration: none;
+                  color: var(--text-dark);
+                "
+              >
+                <span style="font-size: 1.5rem">📄</span>
+                <span>2024 Academic Calendar</span>
+              </a>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  padding: 12px;
+                  background: var(--bg-light);
+                  border-radius: 8px;
+                  text-decoration: none;
+                  color: var(--text-dark);
+                "
+              >
+                <span style="font-size: 1.5rem">📚</span>
+                <span>Textbook List - Grade 7</span>
+              </a>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  padding: 12px;
+                  background: var(--bg-light);
+                  border-radius: 8px;
+                  text-decoration: none;
+                  color: var(--text-dark);
+                "
+              >
+                <span style="font-size: 1.5rem">🎓</span>
+                <span>School Handbook 2024</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings">
+          <div class="portal-header gsap-fade-up">
+            <h1 class="portal-title">Settings</h1>
+            <p class="portal-subtitle">Account and notification preferences</p>
+          </div>
+
+          <div class="dashboard-card gsap-fade-up-delay">
+            <h3 class="card-title" style="margin-bottom: 20px">
+              Notification Preferences
+            </h3>
+            <div style="display: grid; gap: 15px">
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  cursor: pointer;
+                "
+              >
+                <input type="checkbox" checked /> Email notifications for grades
+              </label>
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  cursor: pointer;
+                "
+              >
+                <input type="checkbox" checked /> SMS alerts for absences
+              </label>
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  cursor: pointer;
+                "
+              >
+                <input type="checkbox" checked /> Weekly progress reports
+              </label>
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  cursor: pointer;
+                "
+              >
+                <input type="checkbox" /> Event reminders
+              </label>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Campaign Modal -->
+    <div class="modal-overlay" id="campaignModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="modal-close">&times;</button>
+          <h2>📚 Spring Semester Updates</h2>
+          <p>Important information for all parents</p>
+        </div>
+        <div class="modal-body">
+          <h3>Upcoming Events & Deadlines</h3>
+          <p>
+            As we move into the second semester, here are some important dates
+            to remember:
+          </p>
+          <ul
+            style="
+              margin: 15px 0;
+              padding-left: 20px;
+              color: var(--text-medium);
+            "
+          >
+            <li style="margin-bottom: 8px">
+              <strong>February 15:</strong> Parent-Teacher Conferences
+            </li>
+            <li style="margin-bottom: 8px">
+              <strong>February 28:</strong> Activity Fee payment deadline
+            </li>
+            <li style="margin-bottom: 8px">
+              <strong>March 15:</strong> Spring Musical Auditions begin
+            </li>
+            <li><strong>March 20:</strong> End of Quarter 3</li>
+          </ul>
+          <h3>New Features</h3>
+          <p>
+            We've updated the parent portal with a new mobile-responsive design
+            and faster access to student grades and assignments.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline modal-dismiss">Dismiss</button>
+          <button class="btn btn-primary">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/gsap.min.js"></script>
+    <script src="../js/ScrollTrigger.min.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

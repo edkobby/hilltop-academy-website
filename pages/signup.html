@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign Up - Hill-Top Academy International</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- Minimal Header for Auth Pages -->
+    <header class="site-header auth-header">
+      <a href="../index.html" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+      </a>
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../images/Logo HTA.png" alt="Hill-Top Academy" class="logo-img" />
+        </a>
+      </div>
+      <div style="width: 44px;"></div> <!-- Spacer for balance -->
+    </header>
+
+    <!-- Signup Page -->
+    <div class="login-page">
+      <div class="login-container">
+        <div class="login-left">
+          <div class="login-logo">
+            <h1>Create Account</h1>
+            <p>Join Hill-Top Academy Community</p>
+          </div>
+
+          <form class="login-form" id="signupForm">
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input
+                type="text"
+                id="fullname"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your phone number"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Create a password"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="confirm_password">Confirm Password</label>
+              <input
+                type="password"
+                id="confirm_password"
+                placeholder="Confirm your password"
+                required
+              />
+            </div>
+
+            <div class="form-options">
+              <label>
+                <input type="checkbox" required /> I agree to the
+                <a href="#" style="color: var(--primary-blue)"
+                  >Terms of Service</a
+                >
+                and
+                <a href="#" style="color: var(--primary-blue)"
+                  >Privacy Policy</a
+                >
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary login-btn-full">
+              Create Account
+            </button>
+
+            <div class="login-divider">
+              <span>or continue with</span>
+            </div>
+
+            <div class="portal-options">
+              <a href="portal-parent.html" class="portal-option">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+                Continue as Parent
+              </a>
+              <a href="portal-admin.html" class="portal-option">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+                Continue as Admin
+              </a>
+            </div>
+
+            <div class="login-links">
+              Already have an account? <a href="login.html">Sign in</a>
+            </div>
+          </form>
+        </div>
+
+        <div class="login-right">
+          <video
+            class="auth-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="../images/school 5.jpg"
+          >
+            <source
+              src="../assets/videos/istockphoto-1852875217-640_adpp_is.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="auth-video-overlay"></div>
+
+          <div class="login-logo" style="margin-bottom: 20px">
+            <h1 style="color: white; font-size: 1.8rem">Join Our Community</h1>
+          </div>
+          <p>
+            Create your account to access exclusive features and stay connected
+            with your child's education.
+          </p>
+
+          <div
+            style="
+              margin-top: 30px;
+              padding: 25px;
+              background: rgba(255, 255, 255, 0.1);
+              border-radius: 12px;
+              text-align: left;
+            "
+          >
+            <h4 style="margin-bottom: 15px; font-size: 0.95rem">
+              Account Benefits
+            </h4>
+            <ul
+              style="
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                font-size: 0.85rem;
+              "
+            >
+              <li style="margin-bottom: 10px">
+                ✓ Instant access to grades & reports
+              </li>
+              <li style="margin-bottom: 10px">✓ Online fee payments</li>
+              <li style="margin-bottom: 10px">
+                ✓ Direct messaging with teachers
+              </li>
+              <li>✓ Event registration & updates</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/gsap.min.js"></script>
+    <script src="../js/ScrollTrigger.min.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+      // Signup page specific animations
+      document.addEventListener("DOMContentLoaded", function () {
+        const tl = gsap.timeline();
+
+        tl.from(".login-left", {
+          opacity: 0,
+          x: -50,
+          duration: 0.8,
+          ease: "power3.out",
+        })
+          .from(
+            ".login-right",
+            {
+              opacity: 0,
+              x: 50,
+              duration: 0.8,
+              ease: "power3.out",
+            },
+            "-=0.6",
+          )
+          .from(
+            ".login-form",
+            {
+              opacity: 0,
+              y: 30,
+              duration: 0.6,
+              ease: "power3.out",
+            },
+            "-=0.4",
+          );
+
+        // Form submission handler
+        document
+          .getElementById("signupForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const password = document.getElementById("password").value;
+            const confirmPassword =
+              document.getElementById("confirm_password").value;
+
+            if (password !== confirmPassword) {
+              alert("Passwords do not match!");
+              return;
+            }
+
+            // Redirect to parent portal after signup
+            window.location.href = "portal-parent.html";
+          });
+      });
+    </script>
+  </body>
+</html>
