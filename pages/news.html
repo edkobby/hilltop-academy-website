@@ -400,6 +400,130 @@
       </div>
     </section>
 
+    <!-- Fullscreen Drawer Menu -->
+    <div class="fullscreen-drawer" id="fullscreenDrawer">
+      <div class="drawer-overlay"></div>
+
+      <div class="drawer-content">
+        <div class="drawer-header">
+          <div class="drawer-logo">
+            <span class="logo-text">Hill-Top Academy</span>
+            <span class="logo-subtitle">International</span>
+          </div>
+          <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+            X
+          </button>
+        </div>
+
+        <div class="drawer-body">
+          <div class="drawer-left">
+            <p class="drawer-group-label">Primary Links</p>
+            <a
+              href="../index.html"
+              class="drawer-link"
+              data-img="0"
+              data-caption="Welcome to Hill-Top Academy"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="drawer-link"
+              data-img="1"
+              data-caption="Learn About Our School"
+              >About</a
+            >
+            <a
+              href="contact.html"
+              class="drawer-link"
+              data-img="3"
+              data-caption="Get in Touch"
+              >Contact</a
+            >
+            <a
+              href="admissions.html"
+              class="drawer-link"
+              data-img="0"
+              data-caption="Enroll Today"
+              >Admissions</a
+            >
+            <a
+              href="academics.html"
+              class="drawer-link"
+              data-img="1"
+              data-caption="Academic Excellence"
+              >Academics</a
+            >
+            <a
+              href="news.html"
+              class="drawer-link"
+              data-img="2"
+              data-caption="Latest News"
+              >News & Events</a
+            >
+            <p class="drawer-group-label">Portals</p>
+            <a
+              href="portal-parent.html"
+              class="drawer-link"
+              data-img="3"
+              data-caption="Parent Portal"
+              >Parent Portal</a
+            >
+            <a
+              href="portal-admin.html"
+              class="drawer-link"
+              data-img="4"
+              data-caption="Admin Portal"
+              >Admin Portal</a
+            >
+            <a
+              href="login.html"
+              class="drawer-link"
+              data-img="2"
+              data-caption="Login"
+              >Login</a
+            >
+          </div>
+
+          <div class="drawer-right">
+            <div class="drawer-visual" id="drawerVisual">
+              <div
+                class="drawer-visual-img active"
+                data-index="0"
+                style="background-image: url('../images/school 2.jpg')"
+              ></div>
+              <div
+                class="drawer-visual-img"
+                data-index="1"
+                style="background-image: url('../images/school 4.jpg')"
+              ></div>
+              <div
+                class="drawer-visual-img"
+                data-index="2"
+                style="background-image: url('../images/school 3.jpg')"
+              ></div>
+              <div
+                class="drawer-visual-img"
+                data-index="3"
+                style="background-image: url('../images/school 5.jpg')"
+              ></div>
+              <div
+                class="drawer-visual-img"
+                data-index="4"
+                style="background-image: url('../images/school 1.webp')"
+              ></div>
+              <div class="drawer-visual-overlay"></div>
+              <div class="drawer-visual-caption" id="drawerCaption">
+                Welcome to Hill-Top Academy
+              </div>
+            </div>
+            <div class="drawer-tagline">
+              Raising Confident Learners Since 2008
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer class="site-footer">
       <div class="container">
@@ -442,6 +566,8 @@
       </div>
     </footer>
 
+    <script src="../js/gsap.min.js"></script>
+    <script src="../js/ScrollTrigger.min.js"></script>
     <script src="../js/main.js"></script>
 
     <style>
