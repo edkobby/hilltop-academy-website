@@ -6011,66 +6011,116 @@ main,
   min-width: 0;
 }
 
-/* ===== GLANCE TILES: MOBILE FIX (force clean layout on real phones) ===== */
-.glance-tiles { overflow: hidden; }
-.glance-grid { width: 100%; max-width: 1240px; margin: 0 auto; }
+/* GLANCE CSS AUDIT (conflict sources)
+   - Legacy base + hover/flex expansion: css/style.css ~871-1224
+   - Legacy touch override forcing width:50%: css/style.css ~1139-1166
+   - Legacy mobile grid padding squeeze (padding: 0 20px): css/style.css ~1294-1298
+   - Current Archer-style source of truth: css/style.css ~4629-4904
+   - Older mobile fix block replaced below: css/style.css ~6014-6076
+*/
 
-/* Default: 1 column (very small phones) */
+/* ===== GLANCE TILES FINAL OVERRIDES (mobile/tablet stability) ===== */
+.glance-tiles {
+  overflow: hidden;
+}
+
+.glance-grid {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Mobile + tablet baseline: kill legacy flex/hover reflow below desktop */
 @media (max-width: 1099px) {
-  .glance-grid{
+  .glance-tiles {
+    margin: 0 !important;
+    padding: 0 14px 12px !important;
+  }
+
+  .glance-grid {
     display: grid !important;
-    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
     gap: 14px !important;
     flex: none !important;
   }
 
-  .glance-tile{
+  .glance-tile {
     width: 100% !important;
-    min-height: 240px;
-    overflow: hidden;
+    min-width: 0 !important;
+    min-height: 248px !important;
+    overflow: hidden !important;
     flex: none !important;
   }
 
-  /* Make title never look chopped on narrow screens */
-  .glance-title{
+  .glance-grid:hover .glance-tile,
+  .glance-tile:hover,
+  .glance-tile:focus-visible {
+    flex: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .glance-tile:hover .glance-bg,
+  .glance-tile.is-open .glance-bg {
+    transform: scale(1) !important;
+  }
+
+  .glance-title {
     font-size: clamp(1.45rem, 7vw, 2.1rem) !important;
     line-height: 1.05 !important;
     word-break: normal;
     overflow-wrap: anywhere;
     hyphens: auto;
   }
-}
-
-/* Typical phones: 2 columns grid so it looks premium (2x2) */
-@media (min-width: 420px) and (max-width: 900px){
-  .glance-grid{
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 14px !important;
-  }
-  .glance-tile{ min-height: 260px; }
-  .glance-title{ font-size: clamp(1.3rem, 4.6vw, 1.85rem) !important; }
-}
-
-/* Small phones: guarantee full-width section with safe padding */
-@media (max-width: 480px) {
-  .glance-tiles {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 14px 14px;
-  }
-
-  .glance-grid {
-    width: 100% !important;
-    max-width: none;
-  }
-
-  .glance-tile {
-    min-height: 260px;
-  }
 
   .glance-bg {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+/* 0-559px: single column */
+@media (max-width: 559px) {
+  .glance-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* 560-900px: stable 2-column layout */
+@media (min-width: 560px) and (max-width: 900px) {
+  .glance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+  }
+
+  .glance-tile {
+    min-height: 270px !important;
+  }
+
+  .glance-title {
+    font-size: clamp(1.3rem, 4.6vw, 1.85rem) !important;
+  }
+}
+
+/* Touch devices: never allow hover-driven layout reflow */
+@media (hover: none), (pointer: coarse) {
+  .glance-grid {
+    display: grid !important;
+    flex: none !important;
+  }
+
+  .glance-tile {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .glance-grid:hover .glance-tile,
+  .glance-tile:hover {
+    flex: none !important;
+    transform: none !important;
   }
 }
