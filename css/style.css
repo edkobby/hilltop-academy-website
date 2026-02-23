@@ -6011,13 +6011,48 @@ main,
   min-width: 0;
 }
 
-/* GLANCE TILES MOBILE OVERRIDES (SAFE APPEND) */
-@media (max-width: 480px) {
-  html,
-  body {
-    overflow-x: hidden;
+/* ===== GLANCE TILES: MOBILE FIX (force clean layout on real phones) ===== */
+.glance-tiles { overflow: hidden; }
+.glance-grid { width: 100%; max-width: 1240px; margin: 0 auto; }
+
+/* Default: 1 column (very small phones) */
+@media (max-width: 1099px) {
+  .glance-grid{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    flex: none !important;
   }
 
+  .glance-tile{
+    width: 100% !important;
+    min-height: 240px;
+    overflow: hidden;
+    flex: none !important;
+  }
+
+  /* Make title never look chopped on narrow screens */
+  .glance-title{
+    font-size: clamp(1.45rem, 7vw, 2.1rem) !important;
+    line-height: 1.05 !important;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+}
+
+/* Typical phones: 2 columns grid so it looks premium (2x2) */
+@media (min-width: 420px) and (max-width: 900px){
+  .glance-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+  }
+  .glance-tile{ min-height: 260px; }
+  .glance-title{ font-size: clamp(1.3rem, 4.6vw, 1.85rem) !important; }
+}
+
+/* Small phones: guarantee full-width section with safe padding */
+@media (max-width: 480px) {
   .glance-tiles {
     width: 100%;
     margin: 0 auto;
@@ -6027,60 +6062,15 @@ main,
   .glance-grid {
     width: 100% !important;
     max-width: none;
-    margin: 0 auto;
-    grid-template-columns: 1fr !important;
-    gap: 12px;
   }
 
   .glance-tile {
-    width: 100%;
-    min-height: 280px;
-    overflow: hidden;
-    border-radius: 14px;
+    min-height: 260px;
   }
 
   .glance-bg {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-  }
-
-  .glance-pill {
-    left: 16px;
-    right: 16px;
-    max-width: calc(100% - 32px);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .glance-title {
-    left: 16px;
-    right: 16px;
-    bottom: 96px;
-    font-size: clamp(1.65rem, 7vw, 2.15rem);
-    line-height: 1.08;
-    overflow-wrap: anywhere;
-  }
-
-  .glance-reveal {
-    left: 16px;
-    right: 16px;
-    bottom: 16px;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 820px) {
-  .glance-grid {
-    width: 100% !important;
-    max-width: none;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 14px;
-  }
-
-  .glance-tile {
-    width: 100%;
-    min-height: 274px;
   }
 }
